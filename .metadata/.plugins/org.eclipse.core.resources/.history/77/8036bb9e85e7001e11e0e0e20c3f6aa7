@@ -1,0 +1,13 @@
+package com.mohit.closable;
+
+public class ClientCall {
+	
+	public static void main(String args[]) throws Exception {
+		
+		try(Employee e1= new Employee(1,"A")){
+			
+		} 
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package cm.mohit.builder.design;
+
+public class Flat {
+
+	private String flatNumber;
+	private double carpetArea;
+	private String paintColour;
+	private int noRooms;
+	private boolean isCoveredParking;
+	private boolean isFlatFurnished;
+	
+}

@@ -1,0 +1,33 @@
+package com.mohit.asyncFileupload.controller;
+
+import java.awt.PageAttributes.MediaType;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import com.mohit.asyncFileupload.service.UserService;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private UserService service;
+	
+	
+	@PostMapping(value = "/save",consumes =org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE,produces = "application/json" )
+	public ResponseEntity saveUsers(@RequestParam("files") MultipartFile[] files){
+		
+		for(MultipartFile file:files) {
+		    service.saveUser(file);
+		}
+		return null;
+		
+	}
+	
+	
+
+}

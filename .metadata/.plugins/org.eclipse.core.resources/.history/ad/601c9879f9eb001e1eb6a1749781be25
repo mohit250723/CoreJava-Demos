@@ -1,0 +1,14 @@
+package com.mohit.asyncFileupload.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.mohit.asyncFileupload.service.UserService;
+
+@Controller
+public class UserController {
+	
+	UserService service;
+	
+	
+
+}

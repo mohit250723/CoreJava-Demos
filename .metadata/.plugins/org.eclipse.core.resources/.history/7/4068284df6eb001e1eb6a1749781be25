@@ -1,0 +1,30 @@
+package com.mohit.asyncFileupload.service;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mohit.asyncFileupload.entity.User;
+import com.mohit.asyncFileupload.repo.UserRepo;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepo userRepo;
+	
+	public CompletableFuture<List<User>> saveUser(){
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,11 @@
+package com.mohit.closable;
+
+public class Employee implements AutoCloseable{
+
+	@Override
+	public void close() throws Exception {
+		
+		System.out.println("Employee Class closed!!");
+	}
+
+}

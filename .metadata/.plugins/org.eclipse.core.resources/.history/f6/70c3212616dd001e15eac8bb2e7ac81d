@@ -1,0 +1,27 @@
+package com.mohit.springbootExample.global.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.server.handler.ResponseStatusExceptionHandler;
+
+import com.mohit.springbootExample.controller.custom.exception.EmptyIputException;
+
+@ControllerAdvice
+public class GlobalExceptionHandler extends ResponseStatusExceptionHandler{
+	
+	@ExceptionHandler(EmptyIputException.class)
+	public ResponseEntity<Object> handleEmptyIputException(EmptyIputException ex){
+		return new ResponseEntity<Object>(ex,HttpStatus.BAD_GATEWAY);
+		
+	}
+	
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	public ResponseEntity<String> handleMessageNotReadableException(HttpMessageNotReadableException ex){
+		return new ResponseEntity<String>("Invalid Request,Please check your request and try again",HttpStatus.BAD_REQUEST);
+	}
+
+}

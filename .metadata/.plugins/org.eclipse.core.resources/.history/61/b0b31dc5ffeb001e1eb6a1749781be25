@@ -1,0 +1,2 @@
+spring.application.name=asyncFileupload
+server.port=9091

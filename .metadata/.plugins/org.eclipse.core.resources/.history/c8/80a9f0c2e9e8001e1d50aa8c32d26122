@@ -1,0 +1,4 @@
+#Defining base docker image
+FROM openjdk:11
+LABEL maintainer="javawithdockerbymohit.net"
+ADD target/

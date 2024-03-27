@@ -1,0 +1,11 @@
+package cm.mohit.builder.design;
+
+public class ClientCall {
+
+	public static void main(String args[]) {
+	FlatBuilder builder=new FlatBuilder();
+		Flat buildFlat= 
+		
+	}
+
+}

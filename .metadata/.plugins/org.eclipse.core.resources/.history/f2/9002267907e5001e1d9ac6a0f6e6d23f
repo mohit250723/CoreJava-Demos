@@ -1,0 +1,40 @@
+package cm.mohit.builder.design;
+
+public class FlatBuilder {
+
+	private String flatNumber;
+	private double carpetArea;
+	private String paintColour;
+	private int noRooms;
+	private boolean isCoveredParking;
+	private boolean isFlatFurnished;
+
+	public FlatBuilder setFlatNumber(String flatNumber) {
+		this.flatNumber = flatNumber;
+	}
+
+	public void setCarpetArea(double carpetArea) {
+		this.carpetArea = carpetArea;
+	}
+
+	public void setPaintColour(String paintColour) {
+		this.paintColour = paintColour;
+	}
+
+	public void setNoRooms(int noRooms) {
+		this.noRooms = noRooms;
+	}
+
+	public void setCoveredParking(boolean isCoveredParking) {
+		this.isCoveredParking = isCoveredParking;
+	}
+
+	public void setFlatFurnished(boolean isFlatFurnished) {
+		this.isFlatFurnished = isFlatFurnished;
+	}
+	
+	
+	
+	
+	
+}

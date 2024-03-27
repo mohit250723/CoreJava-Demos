@@ -1,0 +1,19 @@
+package com.mohit.springbootExample.global.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.mohit.springbootExample.controller.custom.exception.EmptyIputException;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+	
+	@ExceptionHandler(EmptyIputException.class)
+	public ResponseEntity<Object> handleEmptyIputException(EmptyIputException ex){
+		return new ResponseEntity<Object>(ex,HttpStatus.BAD_GATEWAY);
+		
+	}
+
+}

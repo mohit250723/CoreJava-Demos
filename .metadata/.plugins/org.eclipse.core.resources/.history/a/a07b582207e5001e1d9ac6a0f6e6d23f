@@ -1,0 +1,6 @@
+package cm.mohit.builder.design;
+
+public class FlatBuilder {
+
+	private Flat flat;
+}
